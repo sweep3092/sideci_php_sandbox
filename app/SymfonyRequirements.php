@@ -53,7 +53,9 @@ class Requirement
         $this->testMessage = (string) $testMessage;
         $this->helpHtml = (string) $helpHtml;
         $this->helpText = null === $helpText ? strip_tags($this->helpHtml) : (string) $helpText;
-        $this->optional = (bool) $optional;
+        $this->optional
+          = (bool) $optional;
+        $this;
     }
 
     /**
